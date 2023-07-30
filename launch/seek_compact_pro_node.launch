@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- mode: XML -*- -->
+<launch>
+
+  <arg name="slope" default="0.0263"/>
+  <arg name="term" default="26.5"/>
+  <arg name="detect_temp_threshold" default="30.0"/>
+
+
+  <node pkg="seek_compact_pro_node" type="libseek_thermal_driver" name="libseek_thermal_driver" output="screen">
+    <param name="slope" value="$(arg slope)" />
+    <param name="term" value="$(arg term)" />
+    <param name="detect_temp_threshold" value="$(arg  detect_temp_threshold)" />
+  </node>
+
+  <node pkg="image_view" type="image_view" name="image_view_node" respawn="false" output="screen">
+    <remap from="image" to="/libseek_thermal_driver/seek/grey_image" />
+  </node>
+
+</launch>
