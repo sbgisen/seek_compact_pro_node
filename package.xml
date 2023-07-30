@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>libseek_thermal_driver</name>
+  <name>seek_compact_pro_node</name>
   <version>0.0.0</version>
   <description>The libseek_thermal_driver package</description>
 

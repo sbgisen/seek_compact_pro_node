@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(libseek_thermal_driver)
+project(seek_compact_pro_node)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
