@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- mode: XML -*- -->
+<launch>
+
+  <node pkg="seek_compact_pro_node" type="libseek_thermal_driver" name="libseek_thermal_driver"/>
+
+  <node pkg="image_view" type="image_view" name="image_view_node" respawn="false" output="screen">
+    <remap from="image" to="/seek/image" />
+  </node>
+
+</launch>
